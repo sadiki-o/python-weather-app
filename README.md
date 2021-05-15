@@ -7,3 +7,7 @@ This is a simple weather application using python .
 ```py
 pip install Pillow
 ```
+
+```py
+pip install requests
+```
