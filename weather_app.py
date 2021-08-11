@@ -3,6 +3,7 @@ from tkinter import *
 import json
 from PIL import ImageTk, Image  
 import os
+from pathlib import Path
 
 #root 
 app = Tk()
@@ -20,7 +21,7 @@ def search():
     #json respond
     json_data = requests.get(url).json()
     #image path
-    path = f"{os.path.dirname(os.path.realpath(__file__))}\weather_icons\{json_data['weather'][0]['icon']}@2x.png"
+    path = Path(f"{os.path.dirname(os.path.realpath(__file__))}/weather_icons/{json_data['weather'][0]['icon']}@2x.png")
     #change image
     stgImg = PhotoImage(file=path)
     img.configure(image=stgImg)
