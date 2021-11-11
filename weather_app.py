@@ -15,7 +15,7 @@ app.geometry(f"{800}x{450}")
 
 def search():
     #json key
-    api_key = "6162e8e5b11a60cff9a204c1ba036e05"
+    api_key = {YOUR_API_KEY_GOES_HERE}
     #api request link
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city_entry.get()}&appid={api_key}"
     #json respond
